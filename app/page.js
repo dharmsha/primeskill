@@ -21,7 +21,7 @@ import {
 // ---------- ASSETS ----------
 const ASSETS = {
   hero: "/images/logopr.jpg",
-  courses: "/images/Courses.jpg",
+  courses: "/images/courses.jpg",
   training: "/images/gallery1.jpg",
 };
 
