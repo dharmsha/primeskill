@@ -16,6 +16,15 @@ import {
   Instagram,
   Clock,
   Award,
+  Snowflake,
+  Cpu,
+  Waves,
+  Zap,
+  RotateCw,
+  Tag,
+  Flame,
+  Package,
+  Star,
 } from "lucide-react";
 
 // ---------- ASSETS ----------
@@ -26,10 +35,140 @@ const ASSETS = {
 };
 
 // ---------- CONSTANTS ----------
-const DISPLAY_NUMBER = "+91 85273785130"; // 👈 apna number daalo
-const WHATSAPP_NUMBER = "85273785130";   // 👈 apna number daalo (bina +)
+const DISPLAY_NUMBER = "+91 85273785130";
+const WHATSAPP_NUMBER = "85273785130";
 
-// ---------- DATA ----------
+// ---------- COURSE DATA (Premium Categories) ----------
+const courseCategories = [
+  {
+    id: "rac",
+    badge: "Most Popular",
+    badgeColor: "bg-orange-500",
+    icon: Snowflake,
+    accent: "text-cyan-600",
+    accentBg: "bg-cyan-50",
+    title: "RAC (Refrigerator & Air Conditioner)",
+    subtitle: "All Types of AC & Fridge Repairing",
+    duration: "2 Months",
+    originalFee: "₹34,999",
+    offFee: "₹24,499",
+    discount: "30% OFF",
+    subCourses: [
+      "Split AC Repairing",
+      "Window AC Repairing",
+      "Hot & Cold AC Repairing",
+      "Inverter AC Repairing",
+      "Non-Inverter AC Repairing",
+      "Single Door Fridge Repairing",
+      "Double Door Fridge Repairing",
+      "Inverter Fridge Repairing",
+      "Non-Inverter Fridge Repairing",
+      "Deep Freezer Repairing",
+      "Water Cooler Repairing",
+    ],
+  },
+  {
+    id: "pcb",
+    badge: "Advanced",
+    badgeColor: "bg-purple-600",
+    icon: Cpu,
+    accent: "text-purple-600",
+    accentBg: "bg-purple-50",
+    title: "PCB Repairing",
+    subtitle: "All Types of PCB Repairing",
+    duration: "2 Months",
+    originalFee: "₹34,999",
+    offFee: "₹24,499",
+    discount: "30% OFF",
+    subCourses: [
+      "AC PCB Repairing",
+      "Fridge PCB Repairing",
+      "Washing Machine PCB Repairing",
+      "RO PCB Repairing",
+      "Geyser PCB Repairing",
+      "Micro Oven PCB Repairing",
+      "Etc.",
+    ],
+  },
+  {
+    id: "wrgcm",
+    badge: "Best Value",
+    badgeColor: "bg-emerald-600",
+    icon: Waves,
+    accent: "text-emerald-600",
+    accentBg: "bg-emerald-50",
+    title: "WRGCM Repairing Course",
+    subtitle: "Washing Machine, RO, Geyser, Cooler & Micro Oven",
+    duration: "2 Months",
+    originalFee: "₹9,999",
+    offFee: "₹8,499",
+    discount: "15% OFF",
+    subCourses: [
+      "All Types of Washing Machine Repairing",
+      "RO (Water Purifier) Repairing",
+      "Geyser Repairing",
+      "Cooler Repairing",
+      "Micro Oven Repairing",
+      "Etc.",
+    ],
+  },
+  {
+    id: "house-wiring",
+    badge: "Job Ready",
+    badgeColor: "bg-blue-600",
+    icon: Zap,
+    accent: "text-blue-600",
+    accentBg: "bg-blue-50",
+    title: "House Wiring",
+    subtitle: "All Types of House Wiring & Basic Electrical Knowledge",
+    duration: "2 Months",
+    originalFee: "₹9,999",
+    offFee: "₹8,499",
+    discount: "15% OFF",
+    subCourses: [
+      "Voltage, Current, Resistance, Power",
+      "AC/DC की जानकारी",
+      "Watt, Ampere",
+      "Conduit Wiring (कंड्यूट वायरिंग)",
+      "Concealed Wiring (कन्सील्ड वायरिंग)",
+      "Surface Wiring (सरफेस वायरिंग)",
+      "One-Way & Two-Way Switch Wiring",
+      "Series & Parallel Wiring",
+      "DB, MCB & RCCB Wiring",
+      "Earthing & Electrical Safety",
+      "Fault Finding & Testing",
+      "Etc.",
+    ],
+  },
+  {
+    id: "motor",
+    badge: "High Demand",
+    badgeColor: "bg-rose-600",
+    icon: RotateCw,
+    accent: "text-rose-600",
+    accentBg: "bg-rose-50",
+    title: "Motor Rewinding",
+    subtitle: "All Types of Motor Rewinding (Single Phase & Three Phase)",
+    duration: "2 Months",
+    originalFee: "₹15,499",
+    offFee: "₹13,174",
+    discount: "15% OFF",
+    subCourses: [
+      "Selling Fan Motor",
+      "Farrata Fan Motor",
+      "Wall Fan Motor",
+      "Table Fan Motor",
+      "Stand Fan Motor",
+      "Tullu Pump Motor",
+      "Submersible Pump Motor",
+      "Aata Chaki Motor",
+      "Induction Motor",
+      "Etc.",
+    ],
+  },
+];
+
+// ---------- BENEFITS ----------
 const benefits = [
   {
     icon: Wrench,
@@ -53,41 +192,108 @@ const benefits = [
   },
 ];
 
-const courses = [
-  { title: "AC Repairing", duration: "3 Months", fees: "₹12,000" },
-  { title: "Fridge Repairing", duration: "2 Months", fees: "₹9,000" },
-  { title: "Washing Machine Repairing", duration: "2 Months", fees: "₹9,000" },
-  { title: "RO Repairing", duration: "1 Month", fees: "₹5,000" },
-  { title: "Geyser Repairing", duration: "1 Month", fees: "₹5,000" },
-  { title: "PCB Repairing", duration: "3 Months", fees: "₹15,000" },
-  { title: "Motor Winding", duration: "2 Months", fees: "₹10,000" },
-  { title: "House Wiring", duration: "2 Months", fees: "₹8,000" },
-  { title: "Inverter & Battery", duration: "1 Month", fees: "₹6,000" },
-  { title: "Cooler Repairing", duration: "1 Month", fees: "₹4,000" },
-];
+// ---------- COMPONENT: CourseCard (Premium) ----------
+function CourseCard({ category, onEnquire }) {
+  const [open, setOpen] = useState(false);
+  const Icon = category.icon;
 
-// ---------- COMPONENT: CourseCard ----------
-function CourseCard({ course, onEnquire }) {
   return (
-    <div className="flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:shadow-lg">
-      <div>
-        <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-orange-50 text-[#e97713]">
-          <Wrench size={22} />
-        </div>
-        <h3 className="text-lg font-extrabold text-slate-900">{course.title}</h3>
-        <div className="mt-3 space-y-1 text-sm text-slate-500">
-          <p className="flex items-center gap-2">
-            <Clock size={15} /> {course.duration}
-          </p>
-          <p className="font-bold text-[#159447]">{course.fees}</p>
-        </div>
+    <div className="group relative flex flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+      {/* Top gradient bar */}
+      <div className={`h-1.5 w-full ${category.badgeColor}`} />
+
+      {/* Badge */}
+      <div className="absolute right-4 top-5 z-10">
+        <span
+          className={`rounded-full ${category.badgeColor} px-3 py-1 text-[10px] font-black uppercase tracking-wider text-white shadow-md`}
+        >
+          {category.badge}
+        </span>
       </div>
-      <button
-        onClick={() => onEnquire(course.title)}
-        className="mt-5 flex items-center justify-center gap-2 rounded-xl bg-[#061c44] px-4 py-3 text-sm font-extrabold text-white transition hover:bg-blue-900"
-      >
-        Enquire <ArrowRight size={16} />
-      </button>
+
+      <div className="flex flex-1 flex-col p-6">
+        {/* Icon + Title */}
+        <div className="flex items-start gap-4">
+          <div
+            className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl ${category.accentBg} ${category.accent}`}
+          >
+            <Icon size={28} />
+          </div>
+          <div className="min-w-0 flex-1 pr-16">
+            <h3 className="text-lg font-black leading-tight text-slate-900">
+              {category.title}
+            </h3>
+            <p className="mt-1 text-xs font-semibold text-slate-500">
+              {category.subtitle}
+            </p>
+          </div>
+        </div>
+
+        {/* Duration */}
+        <div className="mt-4 flex items-center gap-2 text-sm font-bold text-slate-600">
+          <Clock size={15} className="text-slate-400" />
+          Duration: {category.duration}
+        </div>
+
+        {/* Sub-courses toggle */}
+        <button
+          onClick={() => setOpen(!open)}
+          className="mt-4 flex w-full items-center justify-between rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm font-bold text-slate-700 transition hover:bg-slate-100"
+        >
+          <span className="flex items-center gap-2">
+            <Package size={15} /> Course Content ({category.subCourses.length})
+          </span>
+          <ChevronDown
+            size={16}
+            className={`transition-transform duration-300 ${open ? "rotate-180" : ""}`}
+          />
+        </button>
+
+        {/* Sub-courses list */}
+        {open && (
+          <ul className="mt-3 space-y-2 rounded-xl bg-slate-50 p-4">
+            {category.subCourses.map((sub) => (
+              <li
+                key={sub}
+                className="flex items-start gap-2 text-sm text-slate-600"
+              >
+                <CheckCircle2
+                  size={15}
+                  className={`mt-0.5 shrink-0 ${category.accent}`}
+                />
+                <span>{sub}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+
+        {/* Fees */}
+        <div className="mt-5 flex items-end justify-between rounded-2xl border border-dashed border-slate-300 bg-slate-50 p-4">
+          <div>
+            <p className="text-[10px] font-black uppercase tracking-wider text-slate-400">
+              Course Fee
+            </p>
+            <p className="text-sm font-bold text-slate-400 line-through">
+              {category.originalFee}
+            </p>
+            <p className="text-2xl font-black text-[#061c44]">
+              {category.offFee}
+            </p>
+          </div>
+          <span className="rounded-full bg-emerald-100 px-3 py-1 text-xs font-black text-emerald-700">
+            <Tag size={12} className="mr-1 inline" />
+            {category.discount}
+          </span>
+        </div>
+
+        {/* Enquire button */}
+        <button
+          onClick={() => onEnquire(category.title)}
+          className="mt-5 flex w-full items-center justify-center gap-2 rounded-xl bg-[#061c44] px-4 py-3.5 text-sm font-extrabold text-white transition hover:bg-blue-900"
+        >
+          <MessageCircle size={17} /> Enquire on WhatsApp
+        </button>
+      </div>
     </div>
   );
 }
@@ -218,10 +424,10 @@ export default function Page() {
       <section className="relative z-10 mx-auto -mt-9 max-w-6xl px-4">
         <div className="grid grid-cols-2 overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-xl sm:grid-cols-4">
           {[
-            { value: "10+", label: "Technical Courses" },
+            { value: "5+", label: "Premium Courses" },
             { value: "100%", label: "Practical Training" },
             { value: "1:1", label: "Trainer Guidance" },
-            { value: "∞", label: "Skill Opportunities" },
+            { value: "30%", label: "Combo Discount" },
           ].map((item) => (
             <div
               key={item.label}
@@ -275,7 +481,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* COURSES */}
+      {/* COURSES - Premium Categories */}
       <section id="courses" className="bg-white py-20">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
@@ -289,7 +495,7 @@ export default function Page() {
               </h2>
               <p className="mt-4 max-w-xl text-slate-600">
                 हर course में theory के साथ real machine पर practice और
-                troubleshooting सिखाई जाती है।
+                troubleshooting सिखाई जाती है। सभी courses की duration 2 months है।
               </p>
             </div>
             <button
@@ -299,14 +505,65 @@ export default function Page() {
               Course enquiry <ChevronDown size={16} />
             </button>
           </div>
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-            {courses.map((course) => (
+
+          <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {courseCategories.map((category) => (
               <CourseCard
-                key={course.title}
-                course={course}
+                key={category.id}
+                category={category}
                 onEnquire={enquire}
               />
             ))}
+
+            {/* COMBO COURSE CARD */}
+            <div className="relative flex flex-col overflow-hidden rounded-3xl bg-gradient-to-br from-[#061c44] via-[#0a2a63] to-[#061c44] p-6 text-white shadow-2xl md:col-span-2 xl:col-span-1">
+              <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-[#f28a1a]/20 blur-2xl" />
+              <div className="absolute -bottom-8 -left-8 h-32 w-32 rounded-full bg-emerald-500/20 blur-2xl" />
+
+              <div className="relative z-10 flex flex-1 flex-col">
+                <div className="mb-4 flex items-center gap-3">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#f28a1a] text-white">
+                    <Flame size={28} />
+                  </div>
+                  <span className="rounded-full bg-amber-400 px-3 py-1 text-[10px] font-black uppercase tracking-wider text-slate-900">
+                    Best Deal
+                  </span>
+                </div>
+
+                <h3 className="text-2xl font-black">Combo Course</h3>
+                <p className="mt-2 text-sm leading-7 text-blue-100">
+                  कोई भी <span className="font-black text-amber-300">दो कोर्स</span>{" "}
+                  एक साथ लेने पर पाएं{" "}
+                  <span className="font-black text-amber-300">30% OFF</span>
+                </p>
+
+                <div className="mt-5 space-y-3">
+                  <div className="flex items-center gap-2 text-sm text-blue-100">
+                    <Star size={16} className="text-amber-300" />
+                    सभी courses की duration 2 months
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-blue-100">
+                    <Star size={16} className="text-amber-300" />
+                    Real machine पर practical training
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-blue-100">
+                    <Star size={16} className="text-amber-300" />
+                    Job assistance + Certificate
+                  </div>
+                </div>
+
+                <div className="mt-auto pt-6">
+                  <button
+                    onClick={() =>
+                      enquire("Combo Course (कोई भी दो कोर्स - 30% OFF)")
+                    }
+                    className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#f28a1a] px-4 py-3.5 text-sm font-extrabold text-white transition hover:bg-orange-500"
+                  >
+                    <MessageCircle size={17} /> Combo Enquiry करें
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -473,11 +730,14 @@ export default function Page() {
                 className="mt-2 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 font-normal outline-none transition focus:border-[#e97713] focus:ring-2 focus:ring-orange-100"
               >
                 <option value="">कोर्स select करें</option>
-                {courses.map((course) => (
-                  <option key={course.title} value={course.title}>
-                    {course.title}
+                {courseCategories.map((cat) => (
+                  <option key={cat.id} value={cat.title}>
+                    {cat.title}
                   </option>
                 ))}
+                <option value="Combo Course (कोई भी दो कोर्स - 30% OFF)">
+                  Combo Course (कोई भी दो कोर्स - 30% OFF)
+                </option>
               </select>
             </label>
 
@@ -515,6 +775,15 @@ export default function Page() {
           </form>
         </div>
       </section>
+
+      {/* STICKY WHATSAPP FLOAT */}
+      <button
+        onClick={() => enquire()}
+        className="fixed bottom-6 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl transition hover:scale-110"
+        aria-label="Chat on WhatsApp"
+      >
+        <MessageCircle size={26} />
+      </button>
     </main>
   );
 }
