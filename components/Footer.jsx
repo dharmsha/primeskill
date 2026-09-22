@@ -34,13 +34,31 @@ export default function Footer() {
             House Wiring की 100% practical training।
           </p>
           <div className="mt-5 flex gap-3">
-            <a href="#" className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 transition hover:bg-white/10">
+            <a
+              href="https://www.instagram.com/technicalinstituteofpatna01?stkn=dXJtanlvZHF2OHps"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 transition hover:bg-[#f28a1a] hover:border-[#f28a1a]"
+            >
               <Instagram size={16} />
             </a>
-            <a href="#" className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 transition hover:bg-white/10">
+            <a
+              href="https://www.facebook.com/share/1F2kTYJGZS/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 transition hover:bg-[#f28a1a] hover:border-[#f28a1a]"
+            >
               <Facebook size={16} />
             </a>
-            <a href="#" className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 transition hover:bg-white/10">
+            <a
+              href="https://www.youtube.com/@primeskilltechnical"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="YouTube"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 transition hover:bg-[#f28a1a] hover:border-[#f28a1a]"
+            >
               <Youtube size={16} />
             </a>
           </div>
@@ -111,7 +129,13 @@ export default function Footer() {
             <li className="flex gap-3">
               <MapPin size={16} className="mt-0.5 shrink-0 text-[#f28a1a]" />
               <span>
-                Danapur Junction, Lakhni Bigha, Khagaul, Patna, Bihar
+                Branch 1: Near Danapur Junction, Lakhni Bigha, Khagaul, Danapur, Patna
+              </span>
+            </li>
+            <li className="flex gap-3">
+              <MapPin size={16} className="mt-0.5 shrink-0 text-[#f28a1a]" />
+              <span>
+                Branch 2: Near Patna Junction, Karbighiya Bari Masjid, Patna
               </span>
             </li>
           </ul>
@@ -122,9 +146,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="container mx-auto flex flex-col items-center justify-between gap-3 px-4 py-5 text-xs text-blue-200 sm:flex-row lg:px-8">
           <p>© {year} Prime Skill Technical Institute. All rights reserved.</p>
-          <p>
-            Made with ❤️ in Patna
-          </p>
+          <p>Made with ❤️ in Patna</p>
         </div>
       </div>
     </footer>
