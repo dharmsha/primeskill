@@ -51,8 +51,8 @@ const courseCategories = [
     subtitle: "All Types of AC & Fridge Repairing",
     duration: "2 Months",
     originalFee: "₹34,999",
-    offFee: "₹24,499",
-    discount: "30% OFF",
+    offFee: "₹12,499",
+    discount: "15% OFF",
     subCourses: [
       "Split AC Repairing",
       "Window AC Repairing",
