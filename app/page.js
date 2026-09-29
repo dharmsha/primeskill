@@ -426,7 +426,7 @@ export default function Page() {
           {[
             { value: "5+", label: "Premium Courses" },
             { value: "100%", label: "Practical Training" },
-            { value: "1:1", label: "Trainer Guidance" },
+            { value: "6:1", label: "Trainer Guidance" },
             { value: "30%", label: "Combo Discount" },
           ].map((item) => (
             <div

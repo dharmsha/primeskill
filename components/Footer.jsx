@@ -122,8 +122,8 @@ export default function Footer() {
             </li>
             <li className="flex gap-3">
               <Mail size={16} className="mt-0.5 shrink-0 text-[#f28a1a]" />
-              <a href="mailto:info@primeskill.in" className="hover:text-[#f28a1a]">
-                info@primeskill.in
+              <a href="mailto:primeskilltechnical@gmail.com" className="hover:text-[#f28a1a]">
+                primeskilltechnical@gmail.com
               </a>
             </li>
             <li className="flex gap-3">
