@@ -70,7 +70,7 @@ export default function Navbar() {
             </button>
           ))}
           <a
-            href="tel:+82922366050"
+            href="tel:+8292236605"
             className="rounded-xl bg-[#061c44] px-4 py-2 text-sm font-extrabold text-white transition hover:bg-blue-900"
           >
             Call Now
@@ -116,7 +116,7 @@ export default function Navbar() {
               </button>
             ))}
             <a
-              href="tel:+82922366050"
+              href="tel:+8292236605"
               className="mt-2 rounded-xl bg-[#061c44] px-4 py-3 text-center text-sm font-extrabold text-white"
             >
               Call Now

@@ -35,8 +35,8 @@ const ASSETS = {
 };
 
 // ---------- CONSTANTS ----------
-const DISPLAY_NUMBER = "+91 82922366050";
-const WHATSAPP_NUMBER = "82922366050";
+const DISPLAY_NUMBER = "+91 8292236605";
+const WHATSAPP_NUMBER = "8292236605";
 
 // ---------- COURSE DATA (Premium Categories) ----------
 const courseCategories = [
